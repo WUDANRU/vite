@@ -1,0 +1,5 @@
+/* 这个文件没有在页面引入，npm run build后可以看看在vscode的终端对比没有引入和引入后文件的大小 */
+
+body {
+    background-color: peachpuff;
+}

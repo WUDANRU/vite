@@ -1,0 +1,29 @@
+https://github.com/vitejs/vite
+vitejs/vite，原生的es模块，开发/构建工具，非常快
+vite文档：https://vitejs.dev/guide/#scaffolding-your-first-vite-project
+
+cnpm install -g create-vite-app
+create-vite-app vite-demo
+cd vite-demo
+cnpm install
+npm run dev
+
+修改了helloworld.vue，保存后看network(网络)，只修改了一个文件，启动非常快
+
+vite支持热更新(模块的替换)+冷启动(没有编译的过程，只有完全启动http服务器，每次页面过来去请求或操作js,才会去编译)
+
+vite提供打包构建命令，按需进行打包
+
+使用ts,复制todolist项目的ts.config.json 
+和 <script lang="ts"></script>  //HelloWorld.vue加了lang="ts"
+和 ts.config.json的compilerOptions里面加上"isolateedModules":true
+和 复制todolist项目的shims-vue.d.ts类型声明文件
+和 吧main.js改为main.ts //原来是main.js
+和 复制csdn里vite文章的index.html(或todolist项目的public/index.html，假如index.html里的src链接的是main.js改为链接main.ts)
+
+csdn里vite文章:
+https://blog.csdn.net/weixin_44412840/article/details/120037196?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164284610416781685366064%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=164284610416781685366064&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-13-120037196.pc_search_insert_es_download&utm_term=vite%E7%9A%84main.ts%E6%89%BE%E4%B8%8D%E5%88%B0%E6%A8%A1%E5%9D%97%E2%80%9C.%2FApp.vue%E2%80%9D%E6%88%96%E5%85%B6%E7%9B%B8%E5%BA%94%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E&spm=1018.2226.3001.4187
+
+vite目前不建议在大项目中尝试应用，vite使用Rollup打包
+
+vitejs没有成功更改为vitets,这个项目还不能用
